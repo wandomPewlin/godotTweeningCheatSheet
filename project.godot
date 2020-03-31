@@ -1,0 +1,35 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[  ]
+_global_script_class_icons={
+
+}
+
+[application]
+
+config/name="tween_visualizer"
+run/main_scene="res://tween_visualize.tscn"
+boot_splash/bg_color=Color( 0.262745, 0.403922, 0.643137, 1 )
+config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1600
+window/size/height=900
+
+[editor_plugins]
+
+enabled=PoolStringArray(  )
+
+[rendering]
+
+environment/default_clear_color=Color( 0.109804, 0.109804, 0.109804, 1 )
+environment/default_environment="res://default_env.tres"

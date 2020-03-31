@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Line2D.gd" type="Script" id=1]
+
+[sub_resource type="Curve" id=1]
+resource_local_to_scene = true
+max_value = 2.0
+_data = [ Vector2( 0, 0.618182 ), 0.0, 11.3206, 0, 0, Vector2( 0.131868, 1.49091 ), 0.22562, 0.22562, 0, 0, Vector2( 0.873626, 1.49091 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.6 ), -10.7545, 0.0, 0, 0 ]
+
+[node name="Line2D" type="Line2D"]
+width = 2.0
+width_curve = SubResource( 1 )
+default_color = Color( 0.4, 0.501961, 1, 1 )
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+antialiased = true
+script = ExtResource( 1 )
