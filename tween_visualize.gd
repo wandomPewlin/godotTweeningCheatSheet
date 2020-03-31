@@ -44,13 +44,14 @@ export var tween_duration = 2.0
 export var x_step_curve = 1.8
 export var chart_height = 200
 
+func _on_Button_pressed():
+	draw_lines()
+
 func draw_lines():
 	render_curves()
 	format_charts()
 
-
 var charts = []
-
 func render_curves():
 	for chart in charts:
 		chart.queue_free()
@@ -66,6 +67,7 @@ func render_curves():
 				chart.append(l)
 		charts.append(chart)
 	tween.start()
+
 var chart_elements = []
 func format_charts():
 	for chart_element in chart_elements:
@@ -104,9 +106,6 @@ func format_charts():
 			ofs.y += legend_interval_y
 			legend.set_color(index_to_color(i))
 			legend.set_text(easing_pairs[i][1])
-
-func _on_Button_pressed():
-	draw_lines()
 
 func index_to_color(i):
 	match i:
